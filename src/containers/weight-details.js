@@ -3,24 +3,24 @@ import { connect } from 'react-redux';
 
 class WeightDetails extends React.Component {
     render() {
-        console.log("Iniciando o Container de detalhes...");
-        if (!this.props.user){
+        console.log("Iniciando o Container de detalhes...", this.props.weight);
+        if (!this.props.weight){
+            console.log("eh nulo")
             return (
                 <div>
                     Selecione um peso...
                 </div>
             );
         }
-        else{
-            return (
-                <div>
-                    <p>Peso: {this.props.weight.value}</p>
-                    <p>Em: { this.props.weight.date_of_measure }</p>
-                </div>
+        console.log("nao eh nulo")
+        return (
+            <div key={ this.props.weight.id }>
+                <h3>Peso: { this.props.weight.value }</h3>
+            </div>
             );
         }
         
-    }
+
 }
 
 function mapStateToProps(state){

@@ -4,7 +4,7 @@ import ActiveWeightReducer from './reduce-active-weight';
 
 const allReducers = combineReducers({
     weights: WeightReducer,
-    activeUser: ActiveWeightReducer
+    activeWeight: ActiveWeightReducer
 });
 
 export default allReducers;
